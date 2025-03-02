@@ -43,6 +43,8 @@ public class TargetLocator : MonoBehaviour
         {
             float targetDistance = Vector3.Distance(transform.position, target.position);
 
+            transform.LookAt(target);
+
             if (targetDistance < range)
             {
                 Attack(true);
@@ -51,8 +53,6 @@ public class TargetLocator : MonoBehaviour
             {
                 Attack(false);
             }
-
-            transform.LookAt(target.position);
         }
     }
 
