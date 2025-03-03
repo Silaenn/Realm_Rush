@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(TextMeshPro))]
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
-    [SerializeField] int poolSize = 5;
-    [SerializeField] float enemyWait = 1f;
+    [SerializeField][Range(0f, 50f)] int poolSize = 5;
+    [SerializeField][Range(0.1f, 30f)] float enemyWait = 1f;
 
     GameObject[] pool;
 
